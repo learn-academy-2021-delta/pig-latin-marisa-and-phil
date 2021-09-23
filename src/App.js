@@ -36,20 +36,35 @@ class App extends Component{
       })
       console.log("vowelsArray:", vowelsArray)
 
-      function translatePigLatin(str) {
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let phraseTranslated = "";
 
-    if (vowels.indexOf(str[0]) > -1) {
-        phraseTranslated = str + "way";
-        return phraseTranslated;
-    } else {
-        let firstMatch = str.match(/[aeiou]/g) || 0;
-        let vowel = str.indexOf(firstMatch[0]);
-        phraseTranslated = str.substring(vowel) + str.substring(0, vowel) + "ay";
-        return phraseTranslated;
-    }
-}
+    //let vowels = ['a', 'e', 'i', 'o', 'u'];
+    //let y = [-1]
+    let phraseTranslated = "";
+console.log(currentWord.indexOf(vowelsArray[0]));
+    if (currentWord.indexOf(vowelsArray[0]) > -1) {
+      // gives index location of first vowel
+      if(vowelsArray === [0]){
+        return phraseTranslated.push("way")
+      } else if (vowelsArray === -1){
+        return currentWord.indexOf("y")
+        //console.log(currentWord.indexOf(vowelsArray());
+        }
+      }
+
+
+
+
+
+
+    //     phraseTranslated = vowelsArray + "way";
+    //     return phraseTranslated;
+    // } else {
+    //     let firstMatch = vowelsArray.match(/[aeiou]/g) || 0;
+    //     let vowel = vowelsArray.indexOf(firstMatch[0]);
+    //     phraseTranslated = vowelsArray.substring(vowel) + vowelsArray.substring(0, vowel) + "ay";
+    //     return phraseTranslated;
+    // }
+
 
       // const firstVowelIndex = (value) => {
       //   // the function will check each index for a vowel using the .search[]
