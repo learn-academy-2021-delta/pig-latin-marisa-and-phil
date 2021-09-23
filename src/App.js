@@ -28,10 +28,35 @@ class App extends Component{
       // ACTION ITEM: use "currentWord" as a starting point for your code
       console.log("currentWord:", currentWord)
 
+//       substring(x, c(1, 2), c(1, nchar(x)))
+// # [1] "f"  "oo"
+
       let vowelsArray = currentWord.split("").filter(vowel => {
         return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
       console.log("vowelsArray:", vowelsArray)
+
+      function translatePigLatin(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let phraseTranslated = "";
+
+    if (vowels.indexOf(str[0]) > -1) {
+        phraseTranslated = str + "way";
+        return phraseTranslated;
+    } else {
+        let firstMatch = str.match(/[aeiou]/g) || 0;
+        let vowel = str.indexOf(firstMatch[0]);
+        phraseTranslated = str.substring(vowel) + str.substring(0, vowel) + "ay";
+        return phraseTranslated;
+    }
+}
+
+      // const firstVowelIndex = (value) => {
+      //   // the function will check each index for a vowel using the .search[]
+      //   let currentWord = value.search(/[a, e, i, o, u]/g)
+      //   if([0] === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u")
+      //   // the function will return the first vowel index in each string
+      //   return currentWord.push("way")
 
       // your code here!
 
