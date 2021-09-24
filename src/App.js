@@ -40,16 +40,54 @@ class App extends Component{
     //let vowels = ['a', 'e', 'i', 'o', 'u'];
     //let y = [-1]
     let phraseTranslated = "";
-console.log(currentWord.indexOf(vowelsArray[0]));
-    if (currentWord.indexOf(vowelsArray[0]) > -1) {
-      // gives index location of first vowel
-      if(vowelsArray === [0]){
-        return phraseTranslated.push("way")
-      } else if (vowelsArray === -1){
-        return currentWord.indexOf("y")
-        //console.log(currentWord.indexOf(vowelsArray());
-        }
+
+    console.log(currentWord.indexOf(vowelsArray[0]));
+
+    if (currentWord.indexOf(vowelsArray[0]) === 0) {
+      return phraseTranslated = currentWord + "way"
+
+    }
+ var currentWord = myWords[i]
+    for (i=0; i<currentWord.length; i++){
+      if (currentWord.indexOf(vowelsArray[0]) === -1){
+        let yArray = currentWord.split("").filter(vowel => {
+          return vowel === "y" })
+          return phraseTranslated = currentWord.split("").push("ay")
+          console.log(currentWord.indexOf(yArray));
+
+    //let yArray = currentWord.split("").filter(vowel => {
+      //return vowel === "y" })
+
+    // if (currentWord.indexOf(vowelsArray[0]) === -1){
+    //   // if there is no vowel
+    //   let firstMatch = vowelsArray.match(/[y]/g)
+    //     //console.log(currentWord.indexOf(yArray)); //returns where index of 'y' is
+    //     return phraseTranslated = currentWord.split("").push("ay")
+        //
+
       }
+    }
+
+    // index < yIndex
+    // slice indexes less than y Index and
+    //
+    // push (0 to yIndex) // add the values to the end of the array
+    // // add "ay"
+
+
+
+
+
+// console.log(currentWord.indexOf(vowelsArray[0]));
+//     if (currentWord.indexOf(vowelsArray[0]) > -1) {
+//       // gives index location of first vowel
+//       if(vowelsArray === [0]){
+//         return phraseTranslated.push("way")
+//       } else if (vowelsArray === -1){
+//         return currentWord.indexOf("y")
+//         //console.log(currentWord.indexOf(vowelsArray());
+//         }
+//       }
 
 
 
